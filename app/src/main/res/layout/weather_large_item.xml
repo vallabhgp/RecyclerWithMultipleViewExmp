@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3">
+
+    <RelativeLayout
+        android:id="@+id/city_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/skyBlueLight">
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="25dp"
+            android:text="Place name"
+            android:textColor="@android:color/white"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/city_name"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="16dp"
+            android:text="Date"
+            android:textColor="@android:color/white"
+            android:textSize="26dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/temperature_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/skyBlueDark">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/temperature_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="56"
+                android:textColor="@android:color/white"
+                android:textSize="50dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/season_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/temperature_text"
+                android:text="Rainy"
+                android:textColor="@android:color/white"
+                android:textSize="26dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/season_type_img_large"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/skyBlueLight">
+
+        <RelativeLayout
+            android:id="@+id/min_max_temp_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp">
+
+            <ImageView
+                android:id="@+id/min_max_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/thermostate" />
+
+            <TextView
+                android:id="@+id/min_max_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/min_max_img"
+                android:text="12/20"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/humidity_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@+id/min_max_temp_container">
+
+            <ImageView
+                android:id="@+id/humidity_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rainsmall" />
+
+            <TextView
+                android:id="@+id/humidity_per"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/humidity_img"
+                android:text="12/20"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>
